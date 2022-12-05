@@ -1,0 +1,307 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    //colors//
+    --color-style1:#000000;
+    --color-style2:#eaaf46;
+}
+
+
+@font-face {
+    font-family:'Bebas-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bebas-Regular'), url('fonts/Bebas-Regular.ttf') format('ttf'),
+     local('Bebas-Regular'), url('fonts/Bebas-Regular.otf') format('otf'),
+     url('fonts/bebas-regular-webfont.woff2') format('woff2'),
+     url('fonts/bebas-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Arial Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Arial Regular'), url('fonts/ARIAL.woff') format('woff');
+}
+
+
+
+html {
+    font-size: 62.5%;
+    background-color: darken($color:#eaaf46, $amount: 20%);
+}
+
+body {
+    width: 85rem;
+    height: 180rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+}
+
+.header {
+    width: 85rem;
+
+    &__up {
+        width: inherit;
+        height: 12.6rem;
+        background-color: var(--color-style2);
+        display: flex;
+
+        .header-icon {
+            width: 33.3rem;
+            height: 9.7rem;
+            align-self: center;
+            justify-self: start;
+            margin-left: 5rem;
+        }
+    }
+
+
+    
+
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        //gap: 1.5rem;
+        text-align: center;
+
+
+        .main-title {
+            font-family: 'Bebas-Regular';
+            font-size: 8rem;
+            line-height: 18rem;
+            font-weight: 400;
+            color: var(--color-style2);
+            text-transform: uppercase;
+        }
+
+
+        .main-info {
+            font-family: 'Arial Regular';
+            font-size: 2rem;
+            line-height: 18rem;
+            font-weight: 700;
+            color: var(--color-style1);
+            margin-top: -12rem;
+        }
+
+
+        .main-img {
+            width:69.6rem;
+            height:37.1rem;
+            justify-self: center;
+            align-self: center;
+            margin-top: -4rem;
+        }
+
+    }
+
+
+   
+}
+
+    .main {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+ .u-info-position {
+     width: 69.6rem;
+     display: flex;
+     margin-top: -3rem;
+
+     .info-new {
+        font-family: 'Bebas-Regular';
+        font-size: 3rem;
+        line-height: 18rem;
+        font-weight: 400;
+        color: var(--color-style1);
+        justify-self: start;
+        text-transform: uppercase;
+    }
+ }
+
+
+ .main-container {
+     display: flex;
+     flex-direction: column;
+     gap: 4rem;
+     margin-top: -6rem;
+ }
+
+ .container-content {
+     display: flex;
+     width: 100%;
+     gap: 1.5rem;
+ }
+
+
+ .content-img {
+     width:33.2rem;
+     height:22.1rem;
+ }
+
+ .img--r {
+     order: 2;
+ }
+
+ .block--left {
+      order: 1;
+ }
+
+ .content-block {
+     display: flex;
+     flex-direction: column;
+     gap: 1.7rem;
+     align-self: flex-end;
+
+
+     .content-title {
+        font-family: 'Bebas-Regular';
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        font-weight: 400;
+        color: var(--color-style1);
+        text-transform: uppercase;
+     }
+
+
+     .content-main {
+        font-family: 'Arial Regular';
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: 400;
+        color: var(--color-style1);
+     }
+
+
+     .content-btn {
+         width: 18.6rem;
+         height: 4.3rem;
+         border-radius: 1rem;
+         background-color: var(--color-style2);
+         border: none;
+         transition: all .2s;
+
+         &:hover {
+             transform: scale(1.1);
+             cursor: pointer;
+         }
+
+         &:active {
+            transform: scale(0.9);
+        }
+
+         .btn-text {
+            font-family: 'Bebas-Regular';
+            font-size: 2rem;
+            line-height: 2.5rem;
+            font-weight: 400;
+            color: var(--color-style1);
+         }
+     }
+
+     .btn--right {
+         align-self: flex-end;
+     }
+ }
+
+
+.footer {
+    margin-top: 88rem;
+}
+
+ .footer-block {
+     width: 100%;
+     height: 13.3rem;
+     background-color: var(--color-style2);
+     position: relative;
+     
+
+     .u-foot-position {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+     }
+
+     .footer-main {
+        font-family: 'Arial Regular';
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: 400;
+        color: var(--color-style1);
+        justify-self: center;
+        align-self: center;
+     }
+
+     .footer-social {
+        display: flex;
+        gap: 2rem;
+        justify-self: center;
+        align-self: center;
+
+        .social-icon {
+            width: 3rem;
+            height: 3rem;
+            background-color: var(--color-style1);
+            border-radius: 2rem;
+            border: none;
+            box-shadow: 0.2rem  0.2rem 0 #000,
+            -0.1rem -0.1rem 0 #000,  
+             0.1rem -0.1rem 0 #000,
+            -0.1rem  0.1rem 0 #000,
+             0.1rem  0.1rem 0 #000;
+             transition: all .2s;
+
+             &:hover {
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+   
+            &:active {
+               transform: scale(0.9);
+           }
+        }
+     }
+
+ }
+
+ .u-foot-text-position {
+     width: 100%;
+     margin-top: 2rem;
+     position: relative;
+ }
+
+ .footer-text-block {
+     width: 75%;
+     display: flex;
+     gap: 2rem;
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+ }
+
+ .footer-text-bottom {
+    font-family: 'Arial Regular';
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    color: var(--color-style1);
+    transition: all .2s;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+ }
