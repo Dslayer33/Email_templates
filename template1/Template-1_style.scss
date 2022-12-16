@@ -1,3 +1,5 @@
+@import "adaptive/Template1-adaptive.scss";
+
 * {
     padding: 0;
     margin: 0;
@@ -32,7 +34,15 @@
 html {
     font-size: 62.5%;
     background-color: darken($color:#eaaf46, $amount: 20%);
+    width: 100%;
+    height: 100%;
 }
+
+ .html.html {
+    @include very-big-screen {
+        font-size: 80%;
+    }
+ }
 
 body {
     width: 85rem;
@@ -43,6 +53,31 @@ body {
     background-color: white;
 }
 
+
+
+.body.body.body.body {
+    @include breakpoint5 {
+        height: 235rem;
+    }
+}
+
+  .body.body.body {
+      @include breakpoint2 {
+          height: 230rem;
+      }
+  }
+
+
+   .body.body {
+       @include breakpoint1 {
+        width: 100%;
+        position: 0;
+        left: 0;
+        transform: none;
+       }
+   }
+
+
 .header {
     width: 85rem;
 
@@ -50,16 +85,41 @@ body {
         width: inherit;
         height: 12.6rem;
         background-color: var(--color-style2);
-        display: flex;
+        position: relative;
 
         .header-icon {
+            position: absolute;
             width: 33.3rem;
             height: 9.7rem;
-            align-self: center;
-            justify-self: start;
-            margin-left: 5rem;
+            left: 2rem;
+            top: 50%;
+            transform: translate(2rem,-50%);
+        }
+
+        .header-icon.header-icon.header-icon.header-icon  {
+            @include very-small-screen {
+                width: 20rem;
+             }
+        }
+
+        .header-icon.header-icon.header-icon {
+            @include breakpoint5 {
+                width: 25rem;
+                height: 7rem;
+             }
+        }
+
+        .header-icon.header-icon {
+            @include breakpoint2 {
+               left: 50%;
+               top: 50%;
+               transform: translate(-50%,-50%);
+                
+            }
         }
     }
+
+   
 
 
     
@@ -71,7 +131,6 @@ body {
         //gap: 1.5rem;
         text-align: center;
 
-
         .main-title {
             font-family: 'Bebas-Regular';
             font-size: 8rem;
@@ -80,6 +139,13 @@ body {
             color: var(--color-style2);
             text-transform: uppercase;
         }
+
+        .main-title.main-title {
+            @include breakpoint2 {
+                font-size: 5rem;
+            }
+        }
+
 
 
         .main-info {
@@ -91,6 +157,37 @@ body {
             margin-top: -12rem;
         }
 
+        .main-info.main-info.main-info.main-info.main-info.main-info {
+            @include very-small-screen {
+                font-size: 1rem;
+            }
+        }
+
+        .main-info.main-info.main-info.main-info.main-info {
+            @include breakpoint10 {
+                font-size: 1.1rem;
+            }
+        }
+
+        .main-info.main-info.main-info.main-info  {
+            @include breakpoint9 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .main-info.main-info.main-info {
+            @include breakpoint7 {
+                font-size: 1.3rem;
+            }
+        }
+
+        .main-info.main-info {
+            @include breakpoint2 {
+                font-size: 1.5rem;
+            }
+        }
+
+
 
         .main-img {
             width:69.6rem;
@@ -100,22 +197,40 @@ body {
             margin-top: -4rem;
         }
 
+        .main-img.main-img {
+            @include breakpoint2 {
+                width: 100%;
+                height:30rem;
+            }
+        }
+
     }
 
 
    
 }
 
+.header.header {
+    @include breakpoint1 {
+        width: 100%;
+    }
+}
+
+
+   
+
     .main {
-        position: absolute;
+        /*position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%);*/
+        width: 100%;
+        margin-top: -5rem;
     }
 
  .u-info-position {
      width: 69.6rem;
      display: flex;
-     margin-top: -3rem;
+     margin: 0 auto;
 
      .info-new {
         font-family: 'Bebas-Regular';
@@ -125,6 +240,20 @@ body {
         color: var(--color-style1);
         justify-self: start;
         text-transform: uppercase;
+    }
+
+    .info-new.info-new {
+        @include breakpoint2 {
+            justify-self: normal;
+        }
+    }
+ }
+
+ .u-info-position.u-info-position {
+    @include breakpoint2 {
+       width: 100%;
+       text-align: center;
+       display: block;
     }
  }
 
@@ -138,22 +267,51 @@ body {
 
  .container-content {
      display: flex;
-     width: 100%;
+     //width: 100%;
+     width: 69.6rem;
      gap: 1.5rem;
+     justify-self: center;
+     align-self: center;
  }
 
+ .container-content.container-content {
+    @include breakpoint2 {
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+    }
+ }
 
  .content-img {
      width:33.2rem;
      height:22.1rem;
  }
 
+ .content-img.content-img {
+    @include breakpoint5 {
+        width:25rem;
+    }
+ }
+
  .img--r {
      order: 2;
  }
 
+ .img--r.img--r {
+    @include breakpoint2 {
+        order: 1;
+    }
+ }
+
  .block--left {
       order: 1;
+ }
+
+ .block--left.block--left {
+    @include breakpoint2 {
+        order: 2;
+    }
  }
 
  .content-block {
@@ -161,7 +319,6 @@ body {
      flex-direction: column;
      gap: 1.7rem;
      align-self: flex-end;
-
 
      .content-title {
         font-family: 'Bebas-Regular';
@@ -172,6 +329,13 @@ body {
         text-transform: uppercase;
      }
 
+     .content-title.content-title {
+        @include breakpoint2 {
+           justify-self: center;
+           align-self: center;
+        }
+     }
+
 
      .content-main {
         font-family: 'Arial Regular';
@@ -180,6 +344,9 @@ body {
         font-weight: 400;
         color: var(--color-style1);
      }
+
+     
+
 
 
      .content-btn {
@@ -208,15 +375,35 @@ body {
          }
      }
 
+     .content-btn.content-btn {
+        @include breakpoint2 {
+            justify-self: center;
+            align-self: center;
+         }
+     }
+
      .btn--right {
          align-self: flex-end;
      }
  }
 
+ .content-block.content-block.content-block {
+    @include breakpoint5 {
+        width:25rem;
+    }
+ } 
 
-.footer {
-    margin-top: 88rem;
-}
+ .content-block.content-block {
+    @include breakpoint2 {
+        width:33.2rem;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+    }
+ }
+
+
+
 
  .footer-block {
      width: 100%;
@@ -273,24 +460,47 @@ body {
                transform: scale(0.9);
            }
         }
+
+        .social-icon.social-icon {
+            @include breakpoint8 {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+
      }
 
  }
 
  .u-foot-text-position {
      width: 100%;
-     margin-top: 2rem;
+     margin-top: -2rem;
      position: relative;
  }
 
  .footer-text-block {
      width: 75%;
      display: flex;
-     gap: 2rem;
      position: absolute;
      left: 50%;
      transform: translateX(-50%);
+     justify-content: space-between;
  }
+
+ 
+
+ .footer-text-block.footer-text-block.footer-text-block {
+    @include breakpoint3 {
+        width: 100%;
+    }
+ }
+
+ .footer-text-block.footer-text-block {
+    @include breakpoint2 {
+        width: 95%;
+    }
+ }
+
 
  .footer-text-bottom {
     font-family: 'Arial Regular';
@@ -303,5 +513,37 @@ body {
     &:hover {
         cursor: pointer;
         text-decoration: underline;
+    }
+ }
+
+ .footer-text-bottom.footer-text-bottom.footer-text-bottom.footer-text-bottom.footer-text-bottom {
+    @include breakpoint5 {
+        font-size: 1.2rem;
+    }
+ }
+
+ .footer-text-bottom.footer-text-bottom.footer-text-bottom.footer-text-bottom {
+    @include small-screen {
+        font-size: 1.3rem;
+    }
+ }
+
+ .footer-text-bottom.footer-text-bottom.footer-text-bottom {
+    @include breakpoint4 {
+        font-size: 1.4rem;
+    }
+ } 
+
+
+ .footer-text-bottom.footer-text-bottom {
+    @include breakpoint2 {
+        font-size: 1.5rem;
+    }
+ }
+
+
+ .text--del.text--del {
+    @include small-screen {
+        display: none;
     }
  }
