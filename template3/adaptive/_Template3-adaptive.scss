@@ -1,0 +1,77 @@
+@mixin very-small-screen  {
+    @media screen and (max-width:250px) { @content};
+}
+
+@mixin breakpoint1  {
+    @media screen and (max-width:1000px) { @content};
+}
+
+@mixin breakpoint1p4  {
+    @media screen and (max-width:900px) { @content};
+}
+
+@mixin breakpoint1a5  {
+    @media screen and (max-width:800px) { @content };
+}
+
+@mixin breakpoint1p6  {
+    @media screen and (max-width:755px) { @content };
+}
+
+@mixin breakpoint2  {
+    @media screen and (max-width:700px) { @content};
+}
+
+@mixin breakpoint2p5  {
+    @media screen and (max-width:650px) { @content};
+}
+
+@mixin breakpoint3  {
+    @media screen and (max-width:600px) { @content};
+}
+
+@mixin breakpoint4  {
+    @media screen and (max-width:550px) { @content};
+}
+
+@mixin small-screen  {
+    @media screen and (max-width:500px) { @content };
+}
+
+@mixin breakpoint4p5  {
+    @media screen and (max-width:450px) { @content };
+}
+
+@mixin breakpoint5  {
+    @media screen and (max-width:400px) { @content };
+}
+
+
+@mixin breakpoint6  {
+    @media screen and (max-width:350px) { @content };
+}
+
+@mixin breakpoint7  {
+    @media screen and (max-width:330px) { @content };
+}
+
+@mixin breakpoint8  {
+    @media screen and (max-width:300px) { @content };
+}
+
+@mixin breakpoint9  {
+    @media screen and (max-width:290px) { @content };
+}
+
+@mixin breakpoint9p5  {
+    @media screen and (max-width:270px) { @content };
+}
+
+@mixin breakpoint10  {
+    @media screen and (max-width:265px) { @content };
+}
+
+
+@mixin very-big-screen  {
+    @media screen and (min-width:1500px) { @content };
+}
